@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueShop - Toko Online Terpercaya</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fa-solid fa-bag-shopping"></i> BlueShop</a>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Cari produk impianmu...">
+                <button id="searchBtn"><i class="fa-solid fa-search"></i></button>
+            </div>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartToggleBtn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Keranjang</span>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Belanja Mudah, Cepat, & Terpercaya</h1>
+            <p>Temukan berbagai produk berkualitas tinggi dengan penawaran harga terbaik khusus untukmu.</p>
+            <a href="#shop" class="hero-btn">Belanja Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Main Shop Section -->
+    <main class="main-container" id="shop">
+        <!-- Sidebar Filter -->
+        <aside class="sidebar">
+            <h3>Kategori</h3>
+            <ul class="category-list">
+                <li><button class="cat-btn active" data-category="all">Semua Produk</button></li>
+                <li><button class="cat-btn" data-category="Elektronik">Elektronik</button></li>
+                <li><button class="cat-btn" data-category="Fashion">Fashion</button></li>
+                <li><button class="cat-btn" data-category="Aksesoris">Aksesoris</button></li>
+            </ul>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="product-section">
+            <div class="section-header">
+                <h2 id="sectionTitle">Semua Produk</h2>
+                <span id="productCount">Menampilkan produk</span>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Produk akan dimuat melalui JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Drawer / Modal -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-cart-shopping"></i> Keranjang Belanja</h3>
+            <button class="close-cart" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Item keranjang -->
+            <p class="empty-cart-text">Keranjangmu masih kosong.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalPrice">Rp 0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout Sekarang</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="modalBody">
+                <!-- Detail produk via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 BlueShop. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
